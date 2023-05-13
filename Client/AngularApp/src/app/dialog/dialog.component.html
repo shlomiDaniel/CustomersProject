@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Edit Customer</h1>
+<div mat-dialog-content>
+  <p>Edit the fields that you want to update.</p>
+
+  <mat-card class="customer-card" *ngIf="customer != null">
+    <mat-card-content>
+      <h2>Edit Details</h2>
+
+      <div class="detail-row mt-2" *ngIf="customer.firstName">
+        <label>First Name:</label>
+        <input type="text" [(ngModel)]="customer.firstName" class="input-field">
+      </div>
+
+      <div class="detail-row mt-4" *ngIf="customer.lastName">
+        <label>Last Name:</label>
+        <input type="text" [(ngModel)]="customer.lastName" class="input-field">
+      </div>
+
+      <div class="detail-row mt-4" *ngIf="customer.city">
+        <label>City:</label>
+        <input type="text" [(ngModel)]="customer.city" class="input-field">
+      </div>
+
+      <div class="detail-row mt-4" *ngIf="customer.houseNumber">
+        <label>House Number:</label>
+        <input type="text" [(ngModel)]="customer.houseNumber" class="input-field">
+      </div>
+
+      <div class="detail-row mt-4" *ngIf="customer.zipCode">
+        <label>Zip Code:</label>
+        <input type="text" [(ngModel)]="customer.zipCode" class="input-field">
+      </div>
+
+      <div class="detail-row mt-4 " *ngIf="customer.street">
+        <label>Street:</label>
+        <input type="text" [(ngModel)]="customer.street" class="input-field">
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button color="primary" (click)="saveDetails(customer)" [mat-dialog-close]="true">OK</button>
+</div>

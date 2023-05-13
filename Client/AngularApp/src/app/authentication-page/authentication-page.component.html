@@ -1,0 +1,45 @@
+
+
+<mat-card class="card">
+
+      <mat-card-content>
+        <h2 >Authentication Page</h2>
+        <div class="mt-4">
+
+        </div>
+        <div class="mt-4">
+          <img
+            style="width: 50px; height: 50px"
+            src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659651_960_720.png"
+          />
+
+          <input
+            matInput
+            class="my-input"
+            placeholder="Identity"
+            [(ngModel)]="identity"
+            id="identity-input"
+          />
+        </div>
+
+
+
+        <mat-card-actions class="mt-4">
+          <div class="row">
+            <div class="col-md-5"> <button (click)="showCustomerDetails(identity)" mat-raised-button>
+               User Details
+            </button></div>
+            <div class="col-md-7"><button  [routerLink]="'/customers/' + identity" mat-raised-button>
+               Management page
+            </button></div>
+          </div>
+
+
+        </mat-card-actions>
+        <app-customer-details *ngIf="customer != null" [identity]="identity"></app-customer-details>
+      </mat-card-content>
+
+<app-customer-details *ngIf="customer != null && customer.identityNumber != null"
+  [customer]="customer"
+></app-customer-details>
+    </mat-card>

@@ -1,0 +1,50 @@
+.customer-card {
+  width: 95%;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.customer-card label {
+  font-weight: bold;
+}
+
+.customer-card span {
+  margin-left: 10px;
+}
+
+.contracts-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contract-items {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.contract-item {
+  color: chocolate;
+  width: 20%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.edit-delete-links a {
+  margin-left: 10px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.detail-row {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,25 @@
+<mat-card class="customer-card" *ngIf="contract != null">
+  <mat-card-content>
+    <div *ngIf="contract.number">
+      <label>Contract number:</label>
+      <span>{{ contract.number }}</span>
+    </div>
+
+    <div *ngIf="contract.name">
+      <label>Contract name:</label>
+      <span>{{ contract.name }}</span>
+    </div>
+
+    <div *ngIf="contract.contractTypes">
+      <label>Contract contractTypes:</label>
+      <span>{{ contract.contractTypes }}</span>
+    </div>
+
+
+
+  </mat-card-content>
+</mat-card>
+
+<div *ngIf="contract == null">
+  <span>No co</span>
+</div>
